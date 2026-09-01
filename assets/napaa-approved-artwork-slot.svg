@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 520" role="img" aria-labelledby="title desc">
+  <title id="title">Reserved brand artwork frame</title>
+  <desc id="desc">An abstract bottle-green and brown line composition reserved for approved client artwork.</desc>
+  <rect width="1200" height="520" fill="#eee6d9"/>
+  <path d="M72 394C206 430 220 122 384 178s140 244 302 126c128-93 192-124 442-44" fill="none" stroke="#715038" stroke-width="3" opacity=".52"/>
+  <path d="M72 348C194 370 238 170 344 206c118 40 148 197 304 105 147-87 239-86 480-24" fill="none" stroke="#214c3a" stroke-width="2" opacity=".28"/>
+  <path d="M486 112h188v188H486z" fill="none" stroke="#715038" stroke-width="2" opacity=".25"/>
+  <path d="M513 139h134v134H513z" fill="none" stroke="#214c3a" stroke-width="2" opacity=".2" transform="rotate(45 580 206)"/>
+  <circle cx="1012" cy="118" r="38" fill="none" stroke="#715038" stroke-width="2" opacity=".34"/>
+  <circle cx="1012" cy="118" r="10" fill="#214c3a" opacity=".56"/>
+</svg>

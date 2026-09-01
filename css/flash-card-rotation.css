@@ -1,0 +1,21 @@
+/* Physical flash-card rotation: the inner card rotates, while each face keeps its own upright orientation. */
+.service-story{perspective:1800px;transform:none!important;transform-style:flat;transition:box-shadow 620ms cubic-bezier(.22,.72,.18,1)!important;will-change:box-shadow}
+.service-story.is-flipped{transform:none!important;box-shadow:12px 13px 0 rgba(67,43,28,.15)!important}
+.flash-card__inner{position:absolute;inset:0;display:block;transform-style:preserve-3d;transition:transform 620ms cubic-bezier(.22,.72,.18,1);will-change:transform}
+.service-story.is-flipped .flash-card__inner{transform:rotateY(180deg)}
+.service-story.is-flipped .flash-card__front{transform:rotateY(0deg) translateZ(1px)!important}
+.service-story.is-flipped .flash-card__back{transform:rotateY(180deg) translateZ(1px)!important}
+.flash-card__front,.flash-card__back{position:absolute!important;inset:0;display:block;overflow:hidden;backface-visibility:hidden;-webkit-backface-visibility:hidden;transform-style:preserve-3d;transition:none!important}
+.flash-card__front{transform:rotateY(0deg) translateZ(1px)}
+.flash-card__back{transform:rotateY(180deg) translateZ(1px)}
+.flash-card__front:after{content:"";position:absolute;inset:0;pointer-events:none;border:1px solid rgba(216,195,165,.14);box-shadow:inset 0 0 0 1px rgba(23,43,32,.12)}
+.service-story.is-flipped .flash-card__back .service-story__collage{opacity:1;animation:collage-settle 620ms cubic-bezier(.22,.72,.18,1) both}
+.service-story.is-flipped .flash-card__back .service-story__collage img:nth-child(1){animation:collage-one 620ms cubic-bezier(.22,.72,.18,1) both}
+.service-story.is-flipped .flash-card__back .service-story__collage img:nth-child(2){animation:collage-two 620ms cubic-bezier(.22,.72,.18,1) 45ms both}
+.service-story.is-flipped .flash-card__back .service-story__collage img:nth-child(3){animation:collage-three 620ms cubic-bezier(.22,.72,.18,1) 85ms both}
+@keyframes collage-settle{from{filter:brightness(.66)}to{filter:brightness(1)}}
+@keyframes collage-one{from{opacity:.35;transform:rotate(-9deg) translate3d(-18px,13px,0) scale(.96)}to{opacity:1;transform:rotate(-4deg) translate3d(0,0,0) scale(1)}}
+@keyframes collage-two{from{opacity:.2;transform:rotate(12deg) translate3d(22px,16px,0) scale(.94)}to{opacity:1;transform:rotate(7deg) translate3d(0,0,0) scale(1)}}
+@keyframes collage-three{from{opacity:.15;transform:rotate(10deg) translate3d(20px,-15px,0) scale(.92)}to{opacity:1;transform:rotate(5deg) translate3d(0,0,0) scale(1)}}
+@media(max-width:560px){.service-story{perspective:1400px}.service-story.is-flipped{box-shadow:9px 10px 0 rgba(67,43,28,.14)!important}.flash-card__inner{transition-duration:560ms}}
+@media(prefers-reduced-motion:reduce){.service-story,.service-story.is-flipped{transform:none!important;transition:none!important}.flash-card__inner,.service-story.is-flipped .flash-card__inner{transform:none!important;transition:none!important}.flash-card__front{opacity:1}.flash-card__back{opacity:0}.service-story.is-flipped .flash-card__front{opacity:0}.service-story.is-flipped .flash-card__back{opacity:1}.service-story.is-flipped .flash-card__back .service-story__collage,.service-story.is-flipped .flash-card__back .service-story__collage img{animation:none!important}}

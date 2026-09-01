@@ -1,0 +1,83 @@
+/* Bottle-green & brown revision: every field, accent, ribbon, line, and product grade belongs to Napaa's constrained natural palette. */
+:root {
+  --bottle: #254331;
+  --bottle-deep: #172b20;
+  --bottle-mid: #3f5c42;
+  --walnut: #6a442b;
+  --walnut-deep: #432b1c;
+  --tan: #a37d5d;
+  --parchment: #f2eadf;
+  --paper: #fbf7f0;
+  --ink: #2c291f;
+  --muted: #6f6254;
+  --bordeaux: var(--bottle);
+  --bordeaux-deep: var(--bottle-deep);
+  --green: var(--bottle);
+  --green-dark: var(--bottle-deep);
+  --tobacco: var(--walnut);
+  --brass: var(--tan);
+}
+
+.brand__ribbon,
+.hero__ribbon,
+.hero__card em,
+.capability-strip span:not(:last-child):after,
+.campaigns__list article:before,
+.collections:before { color: var(--walnut); border-color: var(--walnut); }
+
+.button--ribbon-primary { background: var(--walnut); box-shadow: 4px 4px 0 var(--tan); }
+.button--ribbon-primary:hover { background: var(--walnut-deep); box-shadow: 2px 2px 0 var(--tan); }
+.hero h1 em, .hero__card em { color: #c2a488; }
+.hero__seal { border-color: #ba9b7e; color: #eadbc6; }
+.hero__visual:after { border-color: var(--walnut); box-shadow: 14px 14px 0 -11px var(--walnut); }
+.collections:before { border-top-color: var(--walnut); }
+
+.topline span,
+.button--bordeaux,
+.button--brass,
+.button--ribbon-primary,
+.campaigns__list article:before,
+.solution-card--wood,
+.occasion__detail { box-shadow-color: var(--tan); }
+
+.hero__frame img,
+.solution-card--image img,
+.collection-panel__image img,
+.campaigns__visual img,
+.portfolio__image img,
+.process__visual img {
+  filter: sepia(.38) saturate(.67) hue-rotate(40deg) brightness(.88) contrast(1.03);
+}
+
+.collection-panel--festive,
+.campaigns,
+.hero { background: var(--bottle); }
+.collection-panel--festive .collection-panel__image,
+.campaigns__visual,
+.hero__frame { background: var(--bottle-deep); }
+.collection-panel--festive h2 em,
+.campaigns h2 em,
+.occasion h2 em { color: #c2a488; }
+.collection-panel--festive .small-copy,
+.eyebrow--light,
+.campaigns__list span,
+.campaigns__visual p { color: #c2a488; }
+
+.solution-card--ink { background: var(--bottle-mid); }
+.solution-card--ink em { color: #c2a488; }
+.solution-card--wood { background: var(--walnut); }
+.portfolio__notes span,
+.about__vision span,
+.process li>span { color: var(--walnut); }
+.closing h2 em,
+.about h2 em,
+.solutions h2 em,
+.process h2 em,
+.portfolio__intro h2 em { color: var(--walnut); }
+.closing:before { border-color: rgba(106,68,43,.2); }
+.closing:after { border-color: rgba(106,68,43,.24); }
+.contact .quiet-link { color: var(--bottle); }
+
+@media (max-width: 980px) {
+  .hero__ribbon { width: 50%; left: -16%; }
+}
