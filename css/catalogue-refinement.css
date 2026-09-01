@@ -2,7 +2,6 @@
 .site-header { min-height: 98px; padding-top: 8px; padding-bottom: 8px; }
 .brand { position: relative; gap: 12px; padding: 2px 15px 2px 0; border-right: 1px solid rgba(67,43,28,.24); }
 .brand:after { content: "BESPOKE GIFTING STUDIO"; position: absolute; left: 43px; bottom: -7px; color: var(--walnut); font-size: 6px; font-weight: 700; letter-spacing: .22em; white-space: nowrap; }
-.brand__ribbon { width: 31px; height: 35px; filter: drop-shadow(6px 0 0 rgba(106,68,43,.12)); }
 .brand img { width: 158px; height: 58px; }
 .hero__seal:after { content: ""; width: 46px; height: 12px; position: absolute; left: -8px; bottom: 6px; border-bottom: 2px solid var(--walnut); border-radius: 0 0 50% 50%; transform: rotate(-18deg); }
 .ribbon-divider { position: relative; }
@@ -26,4 +25,4 @@
 .catalogue-card__object { filter: drop-shadow(7px 8px 0 rgba(67,43,28,.14)); }
 .catalogue__footer:before { content: ""; width: 55px; height: 17px; position: absolute; left: 0; top: -16px; border-top: 2px solid var(--walnut); border-radius: 50%; transform: rotate(-9deg); }
 @media(max-width:1100px){.site-header{min-height:88px}.brand img{width:142px;height:52px}.desktop-nav{gap:11px}.desktop-nav a{font-size:7px}.catalogue__grid{gap:11px}.catalogue-card{min-height:335px}}
-@media(max-width:700px){.site-header{min-height:75px}.brand{border-right:0}.brand:after{display:none}.brand img{width:128px;height:47px}.brand__ribbon{width:25px;height:29px}.ribbon-divider:before,.ribbon-divider:after{display:none}.catalogue__filters{padding-left:0}.catalogue__filters:before,.catalogue__filters:after{display:none}.catalogue__grid{gap:10px}.catalogue-card{min-height:288px;box-shadow:5px 6px 0 rgba(23,43,32,.1)}.catalogue-card:nth-child(n){margin-top:0}.catalogue-card:nth-child(even){margin-top:22px}.catalogue-card:before{width:25px;height:25px;right:11px;bottom:11px}.hero__seal:after{display:none}}
+@media(max-width:700px){.site-header{min-height:75px}.brand{border-right:0}.brand:after{display:none}.brand img{width:128px;height:47px}.ribbon-divider:before,.ribbon-divider:after{display:none}.catalogue__filters{padding-left:0}.catalogue__filters:before,.catalogue__filters:after{display:none}.catalogue__grid{gap:10px}.catalogue-card{min-height:288px;box-shadow:5px 6px 0 rgba(23,43,32,.1)}.catalogue-card:nth-child(n){margin-top:0}.catalogue-card:nth-child(even){margin-top:22px}.catalogue-card:before{width:25px;height:25px;right:11px;bottom:11px}.hero__seal:after{display:none}}

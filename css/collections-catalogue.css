@@ -1,2 +1,211 @@
 /* Collections catalogue: the full product index lives only on the Collections page, keeping the homepage focused on brand storytelling. */
-.collections-catalogue{padding:130px 8vw;background:var(--parchment)}.collections-catalogue__header{max-width:620px}.collections-catalogue__header h2{margin:0;font-family:"Bodoni Moda",serif;font-size:clamp(48px,5.2vw,82px);font-weight:500;line-height:.84;letter-spacing:-.06em}.collections-catalogue__header h2 em{color:var(--walnut)}.collections-catalogue__header>p:not(.eyebrow){max-width:390px;margin:24px 0 0;color:#596153;font-size:14px;line-height:1.65}.collections-catalogue__filters{display:flex;flex-wrap:wrap;gap:8px;margin:48px 0 30px}.collections-catalogue__filters button{padding:9px 11px;border:1px solid rgba(53,67,53,.23);background:transparent;color:var(--bottle);font-size:8px;font-weight:700;letter-spacing:.08em;text-transform:uppercase;transition:background 180ms var(--ease-out),color 180ms var(--ease-out),transform 180ms var(--ease-out)}.collections-catalogue__filters button:hover,.collections-catalogue__filters button.is-active{background:var(--bottle);color:#f5ead9}.collections-catalogue__filters button:active{transform:scale(.97)}.collections-catalogue__grid{display:grid;grid-template-columns:repeat(4,1fr);gap:13px;align-items:start}.collections-catalogue__grid article{min-height:408px;position:relative;overflow:hidden;padding:0 0 42px;background:#f2eadf}.collections-catalogue__grid article:nth-child(3n+2){background:#d8d7c4}.collections-catalogue__grid article:nth-child(3n){background:#c3aa90}.collections-catalogue__grid article:last-child{background:var(--walnut);color:#f5ead9}.collections-catalogue__grid article[hidden]{display:none}.collections-catalogue__grid img{width:100%;height:190px;display:block;object-fit:cover;filter:sepia(.37) saturate(.68) hue-rotate(40deg) brightness(.86);transition:transform 360ms var(--ease-out),filter 360ms var(--ease-out)}.collections-catalogue__grid article:hover img{transform:scale(1.045);filter:sepia(.3) saturate(.74) hue-rotate(40deg) brightness(.92)}.collections-catalogue__grid span,.collections-catalogue__grid h3,.collections-catalogue__grid p{display:block;margin-right:17px;margin-left:17px}.collections-catalogue__grid span{margin-top:15px;color:var(--walnut);font-size:8px;font-weight:700;letter-spacing:.09em;text-transform:uppercase}.collections-catalogue__grid h3{margin-top:9px;margin-bottom:7px;font-family:"Bodoni Moda",serif;font-size:28px;font-weight:500;line-height:.88;letter-spacing:-.045em}.collections-catalogue__grid p{margin-top:0;max-width:185px;color:#515a50;font-size:11px;line-height:1.45}.collections-catalogue__grid a{position:absolute;bottom:17px;left:17px;color:var(--bottle);font-size:8px;font-weight:700;letter-spacing:.1em;text-transform:uppercase}.collections-catalogue__grid article:last-child span{color:#e8d2b2}.collections-catalogue__grid article:last-child p{color:rgba(245,234,217,.78)}.collections-catalogue__grid article:last-child a{color:#f5ead9}@media(max-width:1050px){.collections-catalogue__grid{grid-template-columns:repeat(3,1fr)}}@media(max-width:700px){.collections-catalogue{padding:80px 7vw}.collections-catalogue__header h2{font-size:48px}.collections-catalogue__header>p:not(.eyebrow){font-size:12px}.collections-catalogue__filters{margin:34px 0 20px;gap:6px}.collections-catalogue__filters button{padding:8px;font-size:7px}.collections-catalogue__grid{grid-template-columns:repeat(2,1fr);gap:9px}.collections-catalogue__grid article{min-height:330px;padding-bottom:37px}.collections-catalogue__grid img{height:132px}.collections-catalogue__grid span,.collections-catalogue__grid h3,.collections-catalogue__grid p{margin-right:13px;margin-left:13px}.collections-catalogue__grid span{margin-top:12px;font-size:7px}.collections-catalogue__grid h3{font-size:22px}.collections-catalogue__grid p{font-size:10px}.collections-catalogue__grid a{bottom:13px;left:13px;font-size:7px}}@media(max-width:360px){.collections-catalogue__grid{grid-template-columns:1fr}.collections-catalogue__grid article{min-height:300px}.collections-catalogue__grid img{height:168px}}
+.collections-catalogue {
+  padding: 130px 8vw;
+  background: var(--parchment);
+}
+.collections-catalogue__header {
+  max-width: 620px;
+}
+.collections-catalogue__header h2 {
+  margin: 0;
+  font-family: "Bodoni Moda", serif;
+  font-size: clamp(48px, 5.2vw, 82px);
+  font-weight: 500;
+  line-height: 0.84;
+  letter-spacing: -0.06em;
+}
+.collections-catalogue__header h2 em {
+  color: var(--walnut);
+}
+.collections-catalogue__header > p:not(.eyebrow) {
+  max-width: 390px;
+  margin: 24px 0 0;
+  color: #596153;
+  font-size: 14px;
+  line-height: 1.65;
+}
+.collections-catalogue__filters {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin: 48px 0 30px;
+}
+.collections-catalogue__filters button {
+  padding: 9px 11px;
+  border: 1px solid rgba(53, 67, 53, 0.23);
+  background: transparent;
+  color: var(--bottle);
+  font-size: 8px;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  transition:
+    background 180ms var(--ease-out),
+    color 180ms var(--ease-out),
+    transform 180ms var(--ease-out);
+}
+.collections-catalogue__filters button:hover,
+.collections-catalogue__filters button.is-active {
+  background: var(--bottle);
+  color: #f5ead9;
+}
+.collections-catalogue__filters button:active {
+  transform: scale(0.97);
+}
+.collections-catalogue__grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 13px;
+  align-items: start;
+}
+.collections-catalogue__grid article {
+  min-height: 408px;
+  position: relative;
+  overflow: hidden;
+  padding: 0 0 42px;
+  background: #f2eadf;
+}
+.collections-catalogue__grid article:nth-child(3n + 2) {
+  background: #d8d7c4;
+}
+.collections-catalogue__grid article:nth-child(3n) {
+  background: #c3aa90;
+}
+.collections-catalogue__grid article:last-child {
+  background: var(--walnut);
+  color: #f5ead9;
+}
+.collections-catalogue__grid article[hidden] {
+  display: none;
+}
+.collections-catalogue__grid img {
+  width: 100%;
+  height: 190px;
+  display: block;
+  object-fit: cover;
+  filter: sepia(0.37) saturate(0.68) hue-rotate(40deg) brightness(0.86);
+  transition:
+    transform 360ms var(--ease-out),
+    filter 360ms var(--ease-out);
+}
+.collections-catalogue__grid article:hover img {
+  transform: scale(1.045);
+  filter: sepia(0.3) saturate(0.74) hue-rotate(40deg) brightness(0.92);
+}
+.collections-catalogue__grid span,
+.collections-catalogue__grid h3,
+.collections-catalogue__grid p {
+  display: block;
+  margin-right: 17px;
+  margin-left: 17px;
+}
+.collections-catalogue__grid span {
+  margin-top: 15px;
+  color: var(--walnut);
+  font-size: 8px;
+  font-weight: 700;
+  letter-spacing: 0.09em;
+  text-transform: uppercase;
+}
+.collections-catalogue__grid h3 {
+  margin-top: 9px;
+  margin-bottom: 7px;
+  font-family: "Bodoni Moda", serif;
+  font-size: 28px;
+  font-weight: 500;
+  line-height: 0.88;
+  letter-spacing: -0.045em;
+}
+.collections-catalogue__grid p {
+  margin-top: 0;
+  max-width: 185px;
+  color: #515a50;
+  font-size: 11px;
+  line-height: 1.45;
+}
+.collections-catalogue__grid a {
+  position: absolute;
+  bottom: 17px;
+  left: 17px;
+  color: var(--bottle);
+  font-size: 8px;
+  font-weight: 700;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+}
+.collections-catalogue__grid article:last-child span {
+  color: #e8d2b2;
+}
+.collections-catalogue__grid article:last-child p {
+  color: rgba(245, 234, 217, 0.78);
+}
+.collections-catalogue__grid article:last-child a {
+  color: #f5ead9;
+}
+@media (max-width: 1050px) {
+  .collections-catalogue__grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+@media (max-width: 700px) {
+  .collections-catalogue {
+    padding: 80px 7vw;
+  }
+  .collections-catalogue__header h2 {
+    font-size: 48px;
+  }
+  .collections-catalogue__header > p:not(.eyebrow) {
+    font-size: 12px;
+  }
+  .collections-catalogue__filters {
+    margin: 34px 0 20px;
+    gap: 6px;
+  }
+  .collections-catalogue__filters button {
+    padding: 8px;
+    font-size: 7px;
+  }
+  .collections-catalogue__grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 9px;
+  }
+  .collections-catalogue__grid article {
+    min-height: 330px;
+    padding-bottom: 37px;
+  }
+  .collections-catalogue__grid img {
+    height: 132px;
+  }
+  .collections-catalogue__grid span,
+  .collections-catalogue__grid h3,
+  .collections-catalogue__grid p {
+    margin-right: 13px;
+    margin-left: 13px;
+  }
+  .collections-catalogue__grid span {
+    margin-top: 12px;
+    font-size: 7px;
+  }
+  .collections-catalogue__grid h3 {
+    font-size: 22px;
+  }
+  .collections-catalogue__grid p {
+    font-size: 10px;
+  }
+  .collections-catalogue__grid a {
+    bottom: 13px;
+    left: 13px;
+    font-size: 7px;
+  }
+}
+@media (max-width: 360px) {
+  .collections-catalogue__grid {
+    grid-template-columns: 1fr;
+  }
+  .collections-catalogue__grid article {
+    min-height: 300px;
+  }
+  .collections-catalogue__grid img {
+    height: 168px;
+  }
+}
