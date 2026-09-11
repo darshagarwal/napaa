@@ -1,0 +1,58 @@
+/* Section-specific art direction: Corporate is quiet blue/beige, Sustainable stays bottle-green, and Festive turns vivid red. */
+:root{--corporate-blue:#d8e5e5;--corporate-beige:#e8e0d1;--corporate-ink:#203b40;--festive-red:#a52f37;--festive-red-deep:#76232b;--festive-cream:#f8ecda}
+
+/* Corporate — quiet blue / beige with soft editorial contrast. */
+.corporate-browser{background:var(--corporate-blue);color:var(--corporate-ink)}
+.corporate-browser .selector-background{background:linear-gradient(118deg,var(--corporate-blue) 0%,var(--corporate-beige) 100%)}
+.corporate-browser .selector-background:after{background:linear-gradient(90deg,rgba(216,229,229,.95) 0%,rgba(232,224,209,.8) 54%,rgba(216,229,229,.66) 100%)}
+.corporate-browser .selector-background__image{filter:saturate(.5) sepia(.12) hue-rotate(155deg) brightness(1.08) contrast(.9);mix-blend-mode:multiply;opacity:0}
+.corporate-browser .selector-background__image.is-visible{opacity:.42}
+.corporate-browser .campaigns__header,.corporate-browser .campaigns__header h2{color:var(--corporate-ink)}
+.corporate-browser .campaigns__header .eyebrow{color:#54767b}
+.corporate-browser .campaigns__header p:not(.eyebrow){color:rgba(32,59,64,.72)}
+.corporate-browser .corporate-browser__list{background:rgba(232,224,209,.48);border-left:1px solid rgba(32,59,64,.12);backdrop-filter:blur(3px)}
+.corporate-browser .corporate-option{color:var(--corporate-ink);border-color:rgba(32,59,64,.16);background:rgba(216,229,229,.2)}
+.corporate-browser .corporate-option span{color:#5c7e82}
+.corporate-browser .corporate-option p{color:rgba(32,59,64,.66)}
+.corporate-browser .corporate-option.is-active,.corporate-browser .corporate-option:hover{background:rgba(232,224,209,.82);color:var(--corporate-ink)}
+.corporate-browser .corporate-browser__visual figcaption{color:#54767b}
+
+/* Sustainable — a green editorial spread that relates directly to the home hero. */
+.collection-panel--sustainable{position:relative;isolation:isolate;background:var(--bottle,#173b2b);color:#f3eadc;overflow:hidden}
+.collection-panel--sustainable:before{content:"";position:absolute;width:46vw;height:46vw;right:-21vw;top:-17vw;border:1px solid rgba(216,229,190,.2);border-radius:50%;z-index:-1}
+.collection-panel--sustainable .collection-panel__copy{color:#f3eadc}
+.collection-panel--sustainable .collection-panel__copy .eyebrow{color:#b6caa9}
+.collection-panel--sustainable .collection-panel__copy h2{color:#f3eadc}
+.collection-panel--sustainable .collection-panel__copy h2 em{color:#b6caa9}
+.collection-panel--sustainable .collection-panel__copy>p:not(.eyebrow):not(.small-copy){color:rgba(243,234,220,.86)}
+.collection-panel--sustainable .collection-panel__copy .small-copy{color:rgba(243,234,220,.64)}
+.collection-panel--sustainable .collection-panel__copy .quiet-link{color:#d9e7c7;border-color:rgba(217,231,199,.42)}
+
+/* Festive — vivid red, layered imagery, and warm cream copy to make the mood unmistakable. */
+.collection-panel--festive{position:relative;isolation:isolate;background:var(--festive-red);color:var(--festive-cream);overflow:hidden}
+.collection-panel--festive:before{content:"";position:absolute;width:38vw;height:38vw;left:-17vw;bottom:-22vw;border:1px solid rgba(248,236,218,.25);border-radius:50%;z-index:-1}
+.collection-panel--festive .collection-panel__copy{color:var(--festive-cream)}
+.collection-panel--festive .collection-panel__copy .eyebrow{color:#ffd7b0}
+.collection-panel--festive .collection-panel__copy h2{color:var(--festive-cream)}
+.collection-panel--festive .collection-panel__copy h2 em{color:#ffb38d}
+.collection-panel--festive .collection-panel__copy>p:not(.eyebrow):not(.small-copy){color:rgba(248,236,218,.9)}
+.collection-panel--festive .collection-panel__copy .small-copy{color:rgba(248,236,218,.7)}
+.collection-panel--festive .collection-panel__copy .quiet-link{color:#ffe2c2;border-color:rgba(255,226,194,.48)}
+
+/* Multi-image stacks replace the previous single static image treatment. */
+.collection-panel--sustainable,.collection-panel--festive{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);align-items:center;gap:clamp(2.5rem,8vw,8rem);padding:clamp(5rem,10vw,9rem) clamp(7vw,10vw,12vw);min-height:clamp(640px,58vw,880px)}
+.collection-panel__visual-stack{min-height:clamp(390px,40vw,620px);position:relative;isolation:isolate}
+.collection-panel__visual-frame{position:absolute;overflow:hidden;box-shadow:12px 15px 0 rgba(25,25,20,.16);background:#ddd}
+.collection-panel__visual-frame img{display:block;width:100%;height:100%;object-fit:cover;transition:transform 500ms cubic-bezier(.23,1,.32,1)}
+.collection-panel__visual-stack:hover img{transform:scale(1.035)}
+.collection-panel__visual-frame--1{width:73%;height:83%;right:0;top:0;z-index:1;transform:rotate(2deg)}
+.collection-panel__visual-frame--2{width:44%;height:43%;left:0;bottom:2%;z-index:3;transform:rotate(-6deg);border:9px solid currentColor;box-shadow:8px 11px 0 rgba(25,25,20,.2)}
+.collection-panel__visual-frame--3{width:39%;height:36%;right:5%;bottom:1%;z-index:2;transform:rotate(6deg)}
+.collection-panel__visual-stack--sustainable .collection-panel__visual-frame--1 img,.collection-panel__visual-stack--sustainable .collection-panel__visual-frame--2 img,.collection-panel__visual-stack--sustainable .collection-panel__visual-frame--3 img{filter:saturate(.82) hue-rotate(8deg) brightness(.88)}
+.collection-panel__visual-stack--festive .collection-panel__visual-frame--1 img,.collection-panel__visual-stack--festive .collection-panel__visual-frame--2 img,.collection-panel__visual-stack--festive .collection-panel__visual-frame--3 img{filter:saturate(1.55) sepia(.14) hue-rotate(327deg) brightness(.9) contrast(1.08)}
+.collection-panel--festive .collection-panel__visual-frame{box-shadow:12px 15px 0 rgba(63,18,24,.34)}
+.collection-panel--festive .collection-panel__visual-frame--2{border-color:var(--festive-red)}
+
+@media(max-width:800px){.collection-panel--sustainable,.collection-panel--festive{grid-template-columns:1fr;gap:2.8rem;padding:5.5rem 7vw}.collection-panel__visual-stack{min-height:390px;order:2}.collection-panel--sustainable .collection-panel__copy,.collection-panel--festive .collection-panel__copy{order:1}.corporate-browser .corporate-browser__list{background:rgba(232,224,209,.38)}}
+@media(max-width:540px){.collection-panel--sustainable,.collection-panel--festive{padding:4.8rem 7vw}.collection-panel__visual-stack{min-height:320px}.collection-panel__visual-frame--2{border-width:6px}.corporate-browser .selector-background:after{background:linear-gradient(0deg,rgba(216,229,229,.9),rgba(232,224,209,.64))}}
+@media(prefers-reduced-motion:reduce){.collection-panel__visual-stack:hover img{transform:none}.collection-panel__visual-frame img{transition:none}}

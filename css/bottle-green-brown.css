@@ -18,6 +18,7 @@
   --brass: var(--tan);
 }
 
+.brand__ribbon,
 .hero__ribbon,
 .hero__card em,
 .capability-strip span:not(:last-child):after,

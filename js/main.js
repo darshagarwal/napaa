@@ -115,3 +115,26 @@ const createVisualSelector = (optionSelector, backgroundSelector) => {
 
 createVisualSelector('[data-corporate-option]', '#corporate .selector-background');
 createVisualSelector('[data-occasion-option]', '#occasions .selector-background');
+
+const impactSection = document.querySelector('[data-impact-counts]');
+const impactNumbers = impactSection?.querySelectorAll('[data-count]') || [];
+const formatImpactNumber = (value, suffix) => `${Math.round(value).toLocaleString()}${suffix}`;
+const showImpactFinalValues = () => impactNumbers.forEach((number) => { number.textContent = formatImpactNumber(Number(number.dataset.count), number.dataset.suffix || ''); });
+const animateImpactNumbers = () => {
+  if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) { showImpactFinalValues(); return; }
+  const duration = 1500;
+  const started = performance.now();
+  const tick = (now) => {
+    const progress = Math.min((now - started) / duration, 1);
+    const eased = 1 - Math.pow(1 - progress, 3);
+    impactNumbers.forEach((number) => { number.textContent = formatImpactNumber(Number(number.dataset.count) * eased, number.dataset.suffix || ''); });
+    if (progress < 1) requestAnimationFrame(tick);
+  };
+  requestAnimationFrame(tick);
+};
+if (impactSection && impactNumbers.length) {
+  const impactObserver = new IntersectionObserver((entries) => {
+    if (entries[0].isIntersecting) { animateImpactNumbers(); impactObserver.disconnect(); }
+  }, { threshold: .3 });
+  impactObserver.observe(impactSection);
+}
